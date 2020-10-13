@@ -1,58 +1,57 @@
-// Display current date in header
-$("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
-$("#currentTime").text(moment().format("LT"));
+var schedule = JSON.parse(localStorage.getItem("schedule")) || {};
 
 // Ready browser for code
-$(document).ready(function() {
+$(document).ready(function () {
+    // Update clock in real time
+    setInterval(update, 1000);
 
-    // Listen for user to click buttons
-    $(".saveBtn").on("click", function(){
-   
-        var eventDesc = $("this").siblings(".description").val.trim();
-        var time = $("this").parent().attr("id");
+    // Listen for user to type description of event and click save button
+    $(".saveBtn").on("click", saveEvent);
 
-        // Save event description and time to local storage
-        localStorage.setItem(time, eventDesc);
-    });
+    blockColor();
+});
 
-    // Set block colors for past, present, and future
-    function blockColor() {
+// Define the saving event function
+function saveEvent() {
+    var eventDesc = $(this).siblings(".description").val().trim();
+    var time = $(this).parent().attr("id");
 
-    // var currentBlock = moment().hours();
-    // var blockHour = moment().isBefore(Moment|String|Number|Date|Array);
+    // Save event description and time to local storage
+    schedule[time] = eventDesc;
 
-    $(".time-block").each(function() {
+    localStorage.setItem("schedule", JSON.stringify(schedule))
+}
 
+// Set block colors for past, present, and future
+function blockColor() {
 
-        if ($(".time") < currentBlock) {
-            $("this").addClass("past");
+    var currentBlock = moment().hours();
+
+    $(".time-block").each(function () {
+        var time = $(this).find('.hour').text()
+        var id = $(this).attr("id")
+        var blockHour = moment(time, "hA").hours()
+        var description = $(this).find('.description')
+
+        if (blockHour < currentBlock) {
+            description.addClass("past");
         }
 
         else if (blockHour === currentBlock) {
-            $("this").addClass("present");
+            description.addClass("present");
         }
 
         else {
-            $("this").addClass("future");
+            description.addClass("future");
         }
+
+        description.val(schedule[id])
+
     });
+}
 
-    }
-
-    blockColor();
-
-
-    // Load saved data from local storage
-    $("#hour-8 .description").val(localStorage.getItem("hour-8"));
-    $("#hour-9 .description").val(localStorage.getItem("hour-9"));
-    $("#hour-10 .description").val(localStorage.getItem("hour-10"));
-    $("#hour-11 .description").val(localStorage.getItem("hour-11"));
-    $("#hour-12 .description").val(localStorage.getItem("hour-12"));
-    $("#hour-13 .description").val(localStorage.getItem("hour-13"));
-    $("#hour-14 .description").val(localStorage.getItem("hour-14"));
-    $("#hour-15 .description").val(localStorage.getItem("hour-15"));
-    $("#hour-16 .description").val(localStorage.getItem("hour-16"));
-    $("#hour-17 .description").val(localStorage.getItem("hour-17"));
-    $("#hour-18 .description").val(localStorage.getItem("hour-18"));
-
-});
+// Display current date and time in header
+function update() {
+    $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
+    $("#currentTime").html(moment().format('h:mm a'));
+}
