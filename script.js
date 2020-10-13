@@ -1,3 +1,4 @@
+// Get any saved events from local storage
 var schedule = JSON.parse(localStorage.getItem("schedule")) || {};
 
 // Ready browser for code
@@ -8,6 +9,7 @@ $(document).ready(function () {
     // Listen for user to type description of event and click save button
     $(".saveBtn").on("click", saveEvent);
 
+    // Run function to change hour row colors
     blockColor();
 });
 
