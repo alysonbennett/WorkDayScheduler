@@ -22,15 +22,15 @@ This application allows users to schedule their workday events and appointments.
 
 First page the user sees when opening the Work Day Scheduler, with current date and time at the top of the page
 
-![FirstScreen](screenShots/FirstPage.png)
+![FirstScreen](assests/screenShots/FirstPage.png)
 
 Shot showing time blocks at 5:33pm, showing red as current hour, grey as past hours, and green as future hours
 
-![ColorCodedBlocks](screenShots/ColorBlocks.png)
+![ColorCodedBlocks](assests/screenShots/ColorBlocks.png)
 
 Shot showing what the user will see when the insert events into the time blocks, save, and refresh the page
 
-![BlocksWithSavedContent](screenShots/BlocksWithSaved.png)
+![BlocksWithSavedContent](assests/screenShots/BlocksWithSaved.png)
 
 ## License
 
