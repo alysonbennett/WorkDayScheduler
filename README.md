@@ -1,7 +1,7 @@
 ## Work Day Scheduler - Alyson Bennett
 
 ## Link to Deployed Application
-![Link to Work Day Scheduler](https://alysonbennett.github.io/WorkDayScheduler/)
+[Link to Work Day Scheduler](https://alysonbennett.github.io/WorkDayScheduler/)
 
 ## List of Technologies Used
 
