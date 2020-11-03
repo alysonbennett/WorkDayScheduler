@@ -1,5 +1,7 @@
-## Work Day Scheduler
-Alyson Bennett
+## Work Day Scheduler - Alyson Bennett
+
+## Link to Deployed Application
+![Link to Work Day Scheduler](https://alysonbennett.github.io/WorkDayScheduler/)
 
 ## Assignment Objectives
 The goal of this assignment was to create a daily planner to manage a schedule. When the user opens the planner, they will see the current date at the top of the page. They are then able to type in events in the hour blocks and save them to local storage. When the page is refreshed, the user is still able to see the events they inserted and saved. Each hour block is color coded to indicate whether that hour is in the past, present, or future. 
