@@ -3,13 +3,20 @@
 ## Link to Deployed Application
 ![Link to Work Day Scheduler](https://alysonbennett.github.io/WorkDayScheduler/)
 
-## Assignment Objectives
-The goal of this assignment was to create a daily planner to manage a schedule. When the user opens the planner, they will see the current date at the top of the page. They are then able to type in events in the hour blocks and save them to local storage. When the page is refreshed, the user is still able to see the events they inserted and saved. Each hour block is color coded to indicate whether that hour is in the past, present, or future. 
+## List of Technologies Used
 
-## Process
-I began this project with using the HTML and CSS pages that were provided. I created elements in the given HTML to show each hour in the work day.
+* HTML
+* CSS
+* Bootstrap
+* Font Awesome
+* Google Fonts
+* JavaScript
+* jQuery
+* MomentJS
 
-From there, I coded in a JavaScript file. Functions were needed to grab any items set to the local storage, to listen for when the user clicks the save button in the time blocks, set the time block colors, and display the date and time at the top of the screen. 
+## Application Description
+
+This application allows users to schedule their workday events and appointments. The user is able to record their appointments in the hour blocks and save them to local storage. The time blocks will change color based on the time of the day (past, present, and future).
 
 ## Screen Shots of Finalized Assignment
 
@@ -25,8 +32,19 @@ Shot showing what the user will see when the insert events into the time blocks,
 
 ![BlocksWithSavedContent](screenShots/BlocksWithSaved.png)
 
-## Final Thoughts
-This project was easier than homework assignments prior to this, although it still took some time to research and find answers to a few bugs. I feel that I have a stronger understanding of jQuery and local storage. This was a fun assignment to complete!
+## License
 
-Thank you. 
+The MIT License (MIT)
+
+Copyright (c) 2020 Alyson Bennett
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Collaborators
+
+I was the sole collaborator on this application.
 
